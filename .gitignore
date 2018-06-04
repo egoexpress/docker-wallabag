@@ -1,2 +1,2 @@
-app.env
-db.env
+/app.env
+/db.env
