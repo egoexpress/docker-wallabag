@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb
+    command: --character_set_server=utf8 --collation_server=utf8_general_ci
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    env_file:
+      - db.env
+    networks:
+      - backend
+
+  app:
+    image: wallabag/wallabag
+    restart: always
+    volumes:
+      - images:/var/www/wallabag/web/assets/images
+    env_file:
+      - app.env
+    depends_on:
+      - db
+    networks:
+      - frontend
+      - backend
+
+volumes:
+  db:
+  images:
+
+networks:
+  frontend:
+    external:
+      name: proxy_frontend
+  backend:
