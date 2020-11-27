@@ -1,0 +1,56 @@
+parameters:
+    database_driver: {{ database_driver }}
+    database_driver_class: {{ database_driver_class }}
+    database_host: {{ database_host }}
+    database_port: {{ database_port }}
+    database_name: {{ database_name }}
+    database_user: {{ database_user }}
+    database_password: {{ database_password }}
+    database_path: "%kernel.root_dir%/../data/db/wallabag.sqlite"
+    database_table_prefix: wallabag_
+    database_socket: null
+    database_charset: {{ database_charset }}
+
+    domain_name: {{ domain_name }}
+
+    mailer_transport:  {{ mailer_transport }}
+    mailer_user:       {{ mailer_user }}
+    mailer_password:   {{ mailer_password }}
+    mailer_host:       {{ mailer_host }}
+    mailer_port:       {{ mailer_port }}
+    mailer_encryption: {{ mailer_encryption }}
+    mailer_auth_mode:  {{ mailer_auth_mode }}
+
+    locale:            {{ locale }}
+
+    # A secret key that's used to generate certain security-related tokens
+    secret: {{ secret }}
+
+    # two factor stuff
+    twofactor_auth: {{ twofactor_auth }}
+    twofactor_sender: {{ twofactor_sender }}
+
+    # fosuser stuff
+    fosuser_registration: {{ registration }}
+    fosuser_confirmation: {{ registration_mail_confirmation }}
+
+    from_email: {{ from_email }}
+
+    rss_limit: 50
+
+    # RabbitMQ processing
+    rabbitmq_host: localhost
+    rabbitmq_port: 5672
+    rabbitmq_user: guest
+    rabbitmq_password: guest
+    rabbitmq_prefetch_count: 10
+
+    # Redis processing
+    redis_scheme: {{ redis_scheme }}
+    redis_host: {{ redis_host }}
+    redis_port: {{ redis_port }}
+    redis_path: {{ redis_path }}
+    redis_password: {{ redis_password }}
+
+    # Sentry
+    sentry_dsn: {{ sentry_dsn }}
