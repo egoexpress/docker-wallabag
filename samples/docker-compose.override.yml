@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    environment:
+      - MYSQL_ROOT_PASSWORD=<password>
+
+  app:
+    environment:
+      - MYSQL_ROOT_PASSWORD=<password>
+      - SYMFONY__ENV__DATABASE_DRIVER=pdo_mysql
+      - SYMFONY__ENV__DATABASE_HOST=db
+      - SYMFONY__ENV__DATABASE_PORT=3306
+      - SYMFONY__ENV__DATABASE_NAME=wallabag
+      - SYMFONY__ENV__DATABASE_USER=wallabag
+      - SYMFONY__ENV__DATABASE_PASSWORD=<password>
+      - SYMFONY__ENV__DATABASE_CHARSET=utf8mb4
+      - SYMFONY__ENV__DOMAIN_NAME=https://wallabag.example.com

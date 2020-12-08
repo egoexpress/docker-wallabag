@@ -7,8 +7,6 @@ services:
     restart: always
     volumes:
       - db:/var/lib/mysql
-    env_file:
-      - db.env
     networks:
       - backend
 
@@ -17,8 +15,6 @@ services:
     restart: always
     volumes:
       - images:/var/www/wallabag/web/assets/images
-    env_file:
-      - app.env
     depends_on:
       - db
     networks:
