@@ -11,7 +11,7 @@ services:
       - backend
 
   app:
-    image: egoexpress/wallabag
+    image: egoexpress/wallabag:2.4.1
     restart: always
     volumes:
       - images:/var/www/wallabag/web/assets/images
