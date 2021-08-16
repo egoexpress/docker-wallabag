@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: mariadb
+    image: mariadb:10.6
     command: --character_set_server=utf8 --collation_server=utf8_general_ci
     restart: always
     volumes:
