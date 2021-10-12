@@ -27,6 +27,5 @@ volumes:
 
 networks:
   frontend:
-    external:
-      name: proxy_frontend
   backend:
+    internal: true
