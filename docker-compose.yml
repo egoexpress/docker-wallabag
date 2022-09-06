@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: mariadb:10.7
+    image: mariadb:10.9
     command: --character_set_server=utf8 --collation_server=utf8_general_ci
     restart: always
     volumes:
@@ -11,7 +11,7 @@ services:
       - backend
 
   app:
-    image: wallabag/wallabag:2.4.3
+    image: wallabag/wallabag:2.5.1
     restart: always
     volumes:
       - images:/var/www/wallabag/web/assets/images
